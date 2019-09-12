@@ -38,12 +38,6 @@ import { Component, OnInit } from '@angular/core';
                 Cart
               </a>
             </li>
-            <li>
-              <a href="">
-                <i class="fa fa-"></i>
-                Login
-              </a>
-            </li>
           </ul>
         </div>
       </div>
@@ -64,20 +58,17 @@ import { Component, OnInit } from '@angular/core';
         </div>
         <div class="mainmenu pull-left">
           <ul class="nav navbar-nav collapse navbar-collapse">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li class="dropdown"><a target="_self" class="pointer">Shop<i class="fas fa-angle-down"></i></a>
+            <li><a  routerLink="/index/home" routerLinkActive="active">Home</a></li>
+            <li class="dropdown"><a target="_self" href="#">Shop<i class="fas fa-angle-down"></i></a>
               <ul role="menu" class="sub-menu">
-                <li><a href="shop.html">Products</a></li>
-                <li><a href="product-details.html">Product Details</a></li>
+                <li><a routerLink="/index/Products" routerLinkActive="active">Products</a></li>
                 <li><a href="checkout.html">Checkout</a></li>
                 <li><a href="cart.html">Cart</a></li>
-                <li><a href="login.html">Login</a></li>
               </ul>
             </li>
-            <li class="dropdown"><a href="#">Blog<i class="fas fa-angle-down"></i></a>
+            <li class="dropdown"><a href="#" target="_self">Suppliers<i class="fas fa-angle-down"></i></a>
               <ul role="menu" class="sub-menu">
-                <li><a href="blog.html">Blog List</a></li>
-                <li><a href="blog-single.html">Blog Single</a></li>
+                <li><a routerLink="/index/Suppliers">Suppliers</a></li>
               </ul>
             </li>
           </ul>

@@ -1,0 +1,23 @@
+<h2>Category</h2>
+<div class="panel-group category-products" id="accordian" *ngFor="let category of CategoryBrands">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordian" href="{{'#category-' + category.id}}">
+          <span class="badge pull-right"><i class="fas fa-plus"></i></span>
+          {{category.categoryDescription}}
+        </a>
+      </h4>
+    </div>
+    <div id="{{ 'category-' + category.id }}" class="panel-collapse collapse">
+      <div class="panel-body">
+        <ul *ngFor="let brand of category.tblBrands">
+          <li>
+            <a class="pointer" (click)="$event.stopPropagation();SearchBy(category,brand)">{{brand.brand_Description}}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

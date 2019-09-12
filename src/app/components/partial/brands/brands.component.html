@@ -1,0 +1,8 @@
+<div class="brands_products"><!--brands_products-->
+  <h2>Brands</h2>
+  <div class="brands-name">
+    <ul class="nav nav-pills nav-stacked" *ngFor="let brand of ProductBrands">
+      <li><a class="pointer" (click)="$event.stopPropagation();SearchBy(brand)"> <span class="pull-right">({{brand.numberOfProduct}})</span>{{brand.brand_Description}}</a></li>
+    </ul>
+  </div>
+</div>
