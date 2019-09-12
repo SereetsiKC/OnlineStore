@@ -1,0 +1,39 @@
+<dialog-container>
+  <ng-container class="dialog-header">
+    <div class="col-sm-6">
+      <strong>
+        <span>{{Title}}</span>
+      </strong>
+    </div>
+    <div class="col-sm-6">
+      <ul class="header-nav">
+        <li class="color-red"><a (click)="Close($event)">Close</a><i class="fas fa-times"></i></li>
+      </ul>
+    </div>
+  </ng-container>
+  <ng-container class="dialog-body">
+    <form [formGroup]="SupplierForm" (ngSubmit)="onSubmit($event)">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label for="Name" class="mandatory">Name</label>
+            <input type="text" class="form-control" required name="Name" formControlName="Name"
+              placeholder="Supplier Name">
+          </div>
+        </div>
+      </div>
+    </form>
+  </ng-container>
+  <ng-container class="dialog-footer">
+    <div class="col-sm-12">
+      <div class="col-md-6 pull-right">
+        <button type="button" class="btn btn-default pointer pull-right large" (click)="onSubmit($event)">
+          <div>
+            <i class="far fa-save"></i>
+            Save & Close
+          </div>
+        </button>
+      </div>
+    </div>
+  </ng-container>
+</dialog-container>

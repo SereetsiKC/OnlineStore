@@ -25,6 +25,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ProductService } from './services/product.service';
+import { SupplierService } from './services/supplier.service';
+import { SupplierComponent } from './components/supplier/supplier.component';
+import { AddSupplierComponent } from './components/dialogs/add-supplier/add-supplier.component';
 
 
 @NgModule({
@@ -32,7 +35,7 @@ import { ProductService } from './services/product.service';
     AppComponent,
     IndexComponent,
     HomeComponent,
-    ProductsComponent ,
+    ProductsComponent,
     HeaderComponent,
     LoaderComponent,
     AddProductComponent,
@@ -41,9 +44,12 @@ import { ProductService } from './services/product.service';
     QuickViewComponent,
     QuickFeatureItemsComponent,
     DialogContainerComponent,
+    SupplierComponent,
+    AddSupplierComponent,
   ],
   entryComponents: [
-    AddProductComponent
+    AddProductComponent,
+    AddSupplierComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +66,8 @@ import { ProductService } from './services/product.service';
     LookupService,
     LoaderService,
     OpendialogService,
-    ProductService ,
+    ProductService,
+    SupplierService,
     { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true },
     { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: true } }
   ],

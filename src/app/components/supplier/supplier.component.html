@@ -1,0 +1,51 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="left-sidebar">
+          <app-categories></app-categories>
+          <app-brands></app-brands>
+        </div>
+      </div>
+      <div class="col-sm-9 padding-right">
+        <div class="features_items">
+          <h2 class="title text-center">Suppliers</h2>
+          <div class="row">
+            <div class="col-sm-12">
+              <table class="table table-head table-responsive" cellspacing="0" width="100%">
+                <thead>
+                  <tr>
+                    <td><span><strong>ID</strong></span></td>
+                    <td><span><strong>Name</strong></span></td>
+                  </tr>
+                </thead>
+                <tbody *ngIf="Supplier.length === 0">
+                  <tr>
+                    <td colspan="2">No Records Found</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr *ngFor="let sup of Supplier">
+                    <td><span>{{sup.id}}</span></td>
+                    <td><span>{{sup.name}}</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="pull-right">
+              <a (click)="$event.stopPropagation();AddSupplier()" class="btn btn-default pointer">
+                <i class="fas fa-plus-square"></i>
+                Add New Supplier
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

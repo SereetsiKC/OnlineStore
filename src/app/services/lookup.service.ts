@@ -25,4 +25,9 @@ export class LookupService {
   GetAllCategoryBrands(): Observable<ResponseResult> {
     return this.http.get<ResponseResult>(this._url.concat(`GetAllCategoryBrands`),{ headers: this.httpHeaders });
   }
+
+  GetAllCategories(): Observable<ResponseResult> {
+    return this.http.get<ResponseResult>(this._url.concat(`GetAllCategories`),{ headers: this.httpHeaders });
+  }
+
 }

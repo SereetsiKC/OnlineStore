@@ -24,22 +24,7 @@ import { Component, OnInit } from '@angular/core';
         </div>
       </div>
       <div class="col-sm-8">
-        <div class="shop-menu pull-right">
-          <ul class="nav navbar-nav">
-            <li>
-              <a href="">
-                <i class="fa fa-"></i>
-                Checkout
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <i class="fa fa-"></i>
-                Cart
-              </a>
-            </li>
-          </ul>
-        </div>
+       
       </div>
     </div>
   </div>
@@ -62,13 +47,13 @@ import { Component, OnInit } from '@angular/core';
             <li class="dropdown"><a target="_self" href="#">Shop<i class="fas fa-angle-down"></i></a>
               <ul role="menu" class="sub-menu">
                 <li><a routerLink="/index/Products" routerLinkActive="active">Products</a></li>
-                <li><a href="checkout.html">Checkout</a></li>
-                <li><a href="cart.html">Cart</a></li>
+                <li><a routerLink="/index/CheckOut" routerLinkActive="active">Checkout</a></li>
+                <li><a routerLink="/index/Cart" routerLinkActive="active">Cart</a></li>
               </ul>
             </li>
             <li class="dropdown"><a href="#" target="_self">Suppliers<i class="fas fa-angle-down"></i></a>
               <ul role="menu" class="sub-menu">
-                <li><a routerLink="/index/Suppliers">Suppliers</a></li>
+                <li><a routerLink="/index/Suppliers" routerLinkActive="active">Suppliers</a></li>
               </ul>
             </li>
           </ul>

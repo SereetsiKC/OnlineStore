@@ -22,11 +22,12 @@ export class ProductsComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.hasBackdrop = true;
-    dialogConfig.maxWidth = "50vw";
-    dialogConfig.width = "50%";
-    dialogConfig.position = {
-      top: "30px"
-    };
+    dialogConfig.maxWidth = "70vw";
+    dialogConfig.width = "70%";
+
+    // dialogConfig.position = {
+    //   top: "30px"
+    // };
     dialogConfig.data = {
       Title: `Add New Product`
     };

@@ -16,8 +16,8 @@
       <div class="row">
         <div class="col-sm-4">
           <div class="form-group">
-            <label for="BrandOptions">Brand</label>
-            <select name="BrandOptions" class="form-control" formControlName="Brand_Id">
+            <label for="BrandOptions" class="mandatory">Brand</label>
+            <select name="BrandOptions" required class="form-control" formControlName="Brand_Id">
               <option value="">Select...</option>
               <option *ngFor="let val of BrandOptions" [value]="val.id">{{ val.brand_Description }}</option>
             </select>
@@ -25,18 +25,54 @@
         </div>
         <div class="col-sm-4">
           <div class="form-group">
-            <label for=""></label>
-            <select name="" id="" class="form-control">
-
+            <label for="CategoryOptions" class="mandatory">Category</label>
+            <select name="CategoryOptions" required class="form-control" formControlName="Category_Id">
+              <option value="">Select...</option>
+              <option *ngFor="let val of CategoryOptions" [value]="val.id">{{ val.categoryDescription }}</option>
             </select>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="form-group">
-            <label for=""></label>
-            <select name="" id="" class="form-control">
-              
+            <label for="SupplierOptions" class="mandatory">Supplier</label>
+            <select name="SupplierOptions" required class="form-control" formControlName="Supplier_Id">
+              <option value="">Select...</option>
+              <option *ngFor="let val of SupplierOptions" [value]="val.id">{{ val.name }}</option>
             </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label for="Stock_Count" class="mandatory">Items Count</label>
+            <input type="number" required class="form-control" name="Stock_Count" formControlName="Stock_Count">
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label for="Condition" class="mandatory">Condition</label>
+            <select name="Condition" required class="form-control" formControlName="Condition">
+              <option value="">Select...</option>
+              <option value="New">New</option>
+              <option value="Good">Good</option>
+              <option value="Used">Used</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label for="Price" class="mandatory">Price</label>
+            <input type="text" class="form-control" required name="Price" formControlName="Price" placeholder="R">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="form-group">
+            <label for="Description" class="mandatory">Description</label>
+            <textarea name="Description" id="" cols="30" rows="10" formControlName="Product_Description"
+              class="form-control"></textarea>
           </div>
         </div>
       </div>
@@ -45,9 +81,10 @@
   <ng-container class="dialog-footer">
     <div class="col-sm-12">
       <div class="col-md-6 pull-right">
-        <button type="button" class="btn btn-success pull-right large" (click)="onSubmit($event)">
+        <button type="button" class="btn btn-default pointer pull-right large" (click)="onSubmit($event)">
           <div>
-            <span>Save & Close</span>
+            <i class="far fa-save"></i>
+            Save & Close
           </div>
         </button>
       </div>
